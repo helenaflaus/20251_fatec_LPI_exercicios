@@ -1,0 +1,28 @@
+# Arquivos Python compilados
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Notebooks temporários
+.ipynb_checkpoints/
+
+# Ambientes virtuais
+env/
+venv/
+.venv/
+ENV/
+
+# Configurações locais de IDEs
+.vscode/
+.idea/
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Arquivos temporários
+*.swp
+*.bak
