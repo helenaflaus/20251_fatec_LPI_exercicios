@@ -17,12 +17,10 @@ while int_tempos != 2: # 2 tempos
     for min in range(45): # 45 "minutos"
         float_probabilidadeT1 = random.random()
         float_probabilidadeT2 = random.random()
-        if float_probabilidadeT1 == float_probabilidadeT2:
-            int_gol = 0
-        elif float_probabilidadeT1 > float_probabilidadeT2:
+        if float_probabilidadeT1 > float_probabilidadeT2 and (min == 15 or min == 30 or min == 45): # dei uma complicada assim, pois de acordo com algumas estatísticas ocorrem chutes a gol a cada 15min
             int_gol = random.randint(0, 1)
             int_time1 += int_gol
-        elif float_probabilidadeT2 > float_probabilidadeT1:
+        elif float_probabilidadeT2 > float_probabilidadeT1 and (min == 15 or min == 30 or min == 45):
             int_gol = random.randint(0, 1)
             int_time2 += int_gol
         min += 1
