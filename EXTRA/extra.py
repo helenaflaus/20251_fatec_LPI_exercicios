@@ -85,54 +85,28 @@ def dezmilhares(int_valor):
             return f'{str_dezenas_ate19[19]} mil'
     return ''
 
-def uniddezenasmil(int_valor):
-    
-    int_unidmilhares = (int_valor // 1000) % 10
-
-    if int_unidmilhares == 9:
-        return f'{str_unidades[9]} mil'
-    elif int_unidmilhares == 8:
-        return f'{str_unidades[8]} mil'
-    elif int_unidmilhares == 7:
-        return f'{str_unidades[7]} mil'
-    elif int_unidmilhares == 6:
-        return f'{str_unidades[6]} mil'
-    elif int_unidmilhares == 5:
-        return f'{str_unidades[5]} mil'
-    elif int_unidmilhares == 4:
-        return f'{str_unidades[4]} mil'
-    elif int_unidmilhares == 3:
-        return f'{str_unidades[3]} mil'
-    elif int_unidmilhares == 2:
-        return f'{str_unidades[2]} mil'
-    elif int_unidmilhares == 1:
-        return f'{str_unidades[1]} mil'
-    return ''
-
-# preciso refatorar essa operação, pois esta colocando mil nos valores de unidade também
 def milhares(int_valor):
-    
-    if int_valor >= 1000:
-        int_milhares = int_valor % 10000
+        
+    int_milhares = (int_valor // 1000) % 10
 
-        if int_milhares == 9:
-            return f'{str_unidades[9]} mil'
-        elif int_milhares == 8:
-            return f'{str_unidades[8]} mil'
-        elif int_milhares == 7:
-            return f'{str_unidades[7]} mil'
-        elif int_milhares == 6:
-            return f'{str_unidades[6]} mil'
-        elif int_milhares == 5:
-            return f'{str_unidades[5]} mil'
-        elif int_milhares == 4:
-            return f'{str_unidades[4]} mil'
-        elif int_milhares == 3:
-            return f'{str_unidades[3]} mil'
-        elif int_milhares == 2:
-            return f'{str_unidades[2]} mil'
-        elif int_milhares == 1:
-            return f'{str_unidades[1]} mil'
+    if int_milhares == 9:
+        return f'{str_unidades[9]} mil'
+    elif int_milhares == 8:
+        return f'{str_unidades[8]} mil'
+    elif int_milhares == 7:
+        return f'{str_unidades[7]} mil'
+    elif int_milhares == 6:
+        return f'{str_unidades[6]} mil'
+    elif int_milhares == 5:
+        return f'{str_unidades[5]} mil'
+    elif int_milhares == 4:
+        return f'{str_unidades[4]} mil'
+    elif int_milhares == 3:
+        return f'{str_unidades[3]} mil'
+    elif int_milhares == 2:
+        return f'{str_unidades[2]} mil'
+    elif int_milhares == 1:
+        return f'{str_unidades[1]} mil'
     return ''
 
 def centenas(int_valor):
@@ -254,4 +228,4 @@ if int_valor == 100000:
 elif int_valor == 1:
     print('um real')
 else:
-    print(dezmilhares(int_valor),uniddezenasmil(int_valor),milhares(int_valor),centenas(int_valor),dezenas(int_valor),unidades(int_valor), 'reais')
+    print(dezmilhares(int_valor),milhares(int_valor),centenas(int_valor),dezenas(int_valor),unidades(int_valor), 'reais')
